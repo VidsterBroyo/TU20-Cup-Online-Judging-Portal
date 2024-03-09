@@ -1,0 +1,22 @@
+[
+    {
+        "rubrics": {
+            "Michael": {
+                "Team1": {
+                    "Criterion A": {
+                        "Score": 4,
+                        "Comments": "bad"
+                    }
+                }
+            },
+            "Trevor": {
+                "Team1": {
+                    "Criterion A": {
+                        "Score": -3,
+                        "Comments": "terrible"
+                    }
+                }
+            }
+        }
+    }
+]
