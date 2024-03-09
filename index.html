@@ -1,13 +1,99 @@
 <!DOCTYPE html>
 <html>
+<!-- just use display none to hide the table and show the rubric instead its easier -->
 
 <head>
     <meta charset="UTF-8" />
     <title>temporary site</title>
+    <script src="/static/judgingForm.js"></script>
+
+    <style>
+        #rubric {
+            display: none;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>temporary site</h1>
+
+<body onload="loadRubrics()">
+
+    <h1>bare bones site, just getting backend to work</h1>
+
+    <div id="allRubrics">
+        <p id="welcome"></p>
+        <button onclick="signOut()">sign out</button>
+
+        <table id="rubricsTable">
+            <thead>
+                <tr>
+                    <th>Team Name</th>
+                    <th>Rubric</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="rubric">
+        <button onclick="back()">Back to all rubrics</button>
+
+        <h1 id="rubricTitle"></h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Score</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><b>Criterion A</b><br>
+                        <ul>
+                            <li>desc</li>
+                            <li>desc</li>
+                        </ul>
+                    </td>
+                    <td><input type="text" id="CAS"></td>
+                    <td><input type="text" id="CAC"></td>
+                </tr>
+                <tr>
+                    <td><b>Criterion B</b><br>
+                        <ul>
+                            <li>desc</li>
+                            <li>desc</li>
+                        </ul>
+                    </td>
+                    <td><input type="text" id="CBS"></td>
+                    <td><input type="text" id="CBC"></td>
+                </tr>
+                <tr>
+                    <td><b>Criterion C</b><br>
+                        <ul>
+                            <li>desc</li>
+                            <li>desc</li>
+                        </ul>
+                    </td>
+                    <td><input type="text" id="CCS"></td>
+                    <td><input type="text" id="CCC"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="saveRubric()">Save</button>
+    </div>
 </body>
 
 </html>
