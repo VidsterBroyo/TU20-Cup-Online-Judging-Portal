@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <title>temporary site</title>
     <script src="/static/judgingForm.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 
     <style>
         #rubric {
@@ -26,73 +27,73 @@
 </head>
 
 
-<body onload="loadRubrics()">
+<body onload="loadRubrics()" class="bg-gray-100">
 
-    <h1>bare bones site, just getting backend to work</h1>
+    <h1 class="text-4xl font-bold mb-4 text-center mt-8">Bare bones site, just getting backend to work</h1>
+    <p id="welcome" class="mb-4 text-lg w-3/4 mx-auto"></p>
 
-    <div id="allRubrics">
-        <p id="welcome"></p>
-        <button onclick="signOut()">sign out</button>
+    <div id="allRubrics" class="mb-8 mx-auto w-3/4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="signOut()">Sign out</button>
 
-        <table id="rubricsTable">
+        <table id="rubricsTable" class="table-auto w-full mt-4">
             <thead>
                 <tr>
-                    <th>Team Name</th>
-                    <th>Rubric</th>
+                    <th class="px-4 py-2">Team Name</th>
+                    <th class="px-4 py-2">Rubric</th>
                 </tr>
             </thead>
         </table>
     </div>
 
-    <div id="rubric">
-        <button onclick="back()">Back to all rubrics</button>
+    <div id="rubric" class="mx-auto w-3/4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="back()">Back to all rubrics</button>
 
-        <h1 id="rubricTitle"></h1>
+        <h1 id="rubricTitle" class="text-2xl font-bold mt-4"></h1>
 
-        <table>
+        <table class="table-auto mt-4">
             <thead>
                 <tr>
-                    <th>Category</th>
-                    <th>Score</th>
-                    <th>Comments</th>
+                    <th class="px-4 py-2">Category</th>
+                    <th class="px-4 py-2">Score</th>
+                    <th class="px-4 py-2">Comments</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td><b>Criterion A</b><br>
+                    <td class="border px-4 py-2"><b>Criterion A</b><br>
                         <ul>
                             <li>desc</li>
                             <li>desc</li>
                         </ul>
                     </td>
-                    <td><input type="text" id="CAS"></td>
-                    <td><input type="text" id="CAC"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CAS" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CAC" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
                 </tr>
                 <tr>
-                    <td><b>Criterion B</b><br>
+                    <td class="border px-4 py-2"><b>Criterion B</b><br>
                         <ul>
                             <li>desc</li>
                             <li>desc</li>
                         </ul>
                     </td>
-                    <td><input type="text" id="CBS"></td>
-                    <td><input type="text" id="CBC"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CBS" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CBC" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
                 </tr>
                 <tr>
-                    <td><b>Criterion C</b><br>
+                    <td class="border px-4 py-2"><b>Criterion C</b><br>
                         <ul>
                             <li>desc</li>
                             <li>desc</li>
                         </ul>
                     </td>
-                    <td><input type="text" id="CCS"></td>
-                    <td><input type="text" id="CCC"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CCS" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
+                    <td class="border px-4 py-2"><input type="text" id="CCC" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></td>
                 </tr>
             </tbody>
         </table>
 
-        <button onclick="saveRubric()">Save</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4" onclick="saveRubric()">Save</button>
     </div>
 </body>
 
