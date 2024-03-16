@@ -10,7 +10,6 @@ function login() {
     if (judges.includes(user) && password == "Cup2024r0cks!") {
         sessionStorage.setItem('judge', user)
 
-        alert("Login success")
         window.location.href = "http://localhost:5000/rubrics"
 
     } else {
@@ -22,6 +21,7 @@ function login() {
 function getJudge() {
     if (sessionStorage.getItem('judge')){
         judge = sessionStorage.getItem('judge')
+        document.title = `${judge}'s TU20 Cup Rubrics`
         document.getElementById("welcome").innerText = "Welcome, " + judge
     } else {
         alert("You need to log in again")
@@ -44,10 +44,7 @@ function loadRubrics() {
         console.log(rubrics)
 
         for (i=0; i<rubrics.length; i++){
-            document.getElementById("rubricsTable").innerHTML += `<tr>
-                                                                      <th scope="row">${rubrics[i]["TeamName"]}</th>
-                                                                      <td><button onclick="displayRubric('${rubrics[i]["TeamName"]}')">Open Rubric</button></td>
-                                                                  </tr>`
+            document.getElementById("rubricsGroup").innerHTML += `<button id="rubricButton" onclick="displayRubric('${rubrics[i]["TeamName"]}')">${rubrics[i]["TeamName"]}</button><br>`
         }
 
     } catch (error) {

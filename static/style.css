@@ -1,0 +1,30 @@
+#rubric {
+    display: none;
+}
+
+td {
+    padding: 5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#rubricButton {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#test {
+    background-color: green;
+}
+
+#header {
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
