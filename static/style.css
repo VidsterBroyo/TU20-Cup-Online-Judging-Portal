@@ -28,3 +28,28 @@ table, th, td {
     margin-left: 8px;
     margin-right: 8px;
 }
+
+.loginheader {
+    height: 350px;
+    width: 100%;
+    margin-bottom: -240px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.bg-block {
+    border: solid 2px red;
+}
+
+#div1 {
+    background-image: url("tu205.png");
+    background-size: cover; /* Resize the background image to cover the entire background */
+    background-position: center;
+    margin-top: 250px; /* Adjust the margin-top to move it down */
+    width: 100%;
+    height: 510px; /* Adjust the height as needed */
+}
+
+#my{
+    zoom: 80%;
+    }
+

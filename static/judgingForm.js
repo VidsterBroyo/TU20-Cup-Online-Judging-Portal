@@ -2,33 +2,33 @@ judges = ["Michael", "Trevor", "Franklin"]
 judge = ""
 team = ""
 
-function login() {
-    user = document.getElementById('user').value
-    password = document.getElementById('password').value
+// function login() {
+//     user = document.getElementById('user').value
+//     password = document.getElementById('password').value
 
 
-    if (judges.includes(user) && password == "Cup2024r0cks!") {
-        sessionStorage.setItem('judge', user)
+//     if (judges.includes(user) && password == "Cup2024r0cks!") {
+//         sessionStorage.setItem('judge', user)
 
-        window.location.href = "http://localhost:5000/rubrics"
+//         window.location.href = "http://localhost:5000/rubrics"
 
-    } else {
-        alert("Invalid credentials")
-    }
-}
+//     } else {
+//         alert("Invalid credentials")
+//     }
+// }
 
 
-function getJudge() {
-    if (sessionStorage.getItem('judge')){
-        judge = sessionStorage.getItem('judge')
-        document.title = `${judge}'s TU20 Cup Rubrics`
-        document.getElementById("welcome").innerText = "Welcome, " + judge
-    } else {
-        alert("You need to log in again")
-        window.location.href = "http://localhost:5000"
-    }
+// function getJudge() {
+//     if (sessionStorage.getItem('judge')){
+//         judge = sessionStorage.getItem('judge')
+//         document.title = `${judge}'s TU20 Cup Rubrics`
+//         document.getElementById("welcome").innerText = "Welcome, " + judge
+//     } else {
+//         alert("You need to log in again")
+//         window.location.href = "http://localhost:5000"
+//     }
 
-}
+// }
 
 
 function loadRubrics() {
