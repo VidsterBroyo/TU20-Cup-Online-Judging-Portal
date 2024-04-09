@@ -2,10 +2,10 @@
   "name": "temporaryjudgingform",
   "version": "1.0.0",
   "description": "",
-  "main": "judgingFormAPI.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node judgingFormAPI.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
