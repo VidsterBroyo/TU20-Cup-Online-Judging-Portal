@@ -145,7 +145,50 @@ app.post('/newRubric/:judge/', async (req, res) => {
     
 })
 
+// stats page
+app.get('/stats', async (req, res) => {
+    // read from stats.html file
+    let data = await fsP.readFile('./stats.html')
 
+    // send html
+    res.writeHead(200, { 'Content-Type': 'text/html' }).end(data)
+})
+
+// get all rubrics for stats
+app.get('/getAllRubrics', async (req, res) => {
+    try {
+        // get rubric data
+        let rubrics = JSON.parse(await fsP.readFile('./rubrics.json'))
+        
+        // send json
+        res.setHeader('content-type', 'application/json')
+        res.json(rubrics)
+        res.end()
+
+    } catch (error) {
+        res.end("getAllRubrics response error: " + error)
+    }
+})
+
+// delete a rubric
+app.delete('/deleteRubric/:judge/:teamName', async (req, res) => {
+    try {
+        var judge = req.params.judge
+        var teamName = req.params.teamName
+
+        let rubrics = JSON.parse(await fsP.readFile('./rubrics.json'))
+
+        // Filter out the rubric to delete
+        rubrics[judge] = rubrics[judge].filter(rubric => rubric["TeamName"] !== teamName)
+    
+        await fsP.writeFile('./rubrics.json', JSON.stringify(rubrics))
+        res.end("success")
+    }
+    catch (error) {
+        console.error(error)
+        res.end("deleteRubric response error: " + error)
+    }
+})
 
 // open port
 app.listen(PORT, (req, res) => console.log(`Port ${PORT} Opened`))

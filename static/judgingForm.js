@@ -12,7 +12,7 @@ function login() {
     if (judges.includes(user) && password == "Cup2024r0cks!") {
         sessionStorage.setItem('judge', user)
 
-        window.location.href = "http://localhost/rubrics"
+        window.location.href = "/rubrics"
 
     } else {
         alert("Invalid credentials")
@@ -27,7 +27,7 @@ function getJudge() {
         document.getElementById("welcome").innerText = "Welcome, " + judge
     } else {
         alert("You need to log in again")
-        window.location.href = "http://localhost/login"
+        window.location.href = "/login"
     }
 
 }
@@ -41,14 +41,17 @@ function loadRubrics() {
     console.log("running")
     try {
         var request = new XMLHttpRequest()
-        request.open('GET', `http://localhost/getRubrics/${judge}`, false)
+        request.open('GET', `/getRubrics/${judge}`, false)
         request.send()
 
         rubrics = JSON.parse(request.responseText)
 
         for (i = 0; i < rubrics.length; i++) {
             console.log(rubrics[i]["TeamMembers"])
-            rubricsHTML += `<button id="rubricButton" onclick="displayRubric('${rubrics[i]["TeamName"]}')">${rubrics[i]["TeamName"]}: ${rubrics[i]["TeamMembers"].join(", ")} - ${rubrics[i]["Total"]} points</button><br>`
+            rubricsHTML += `<div class="flex items-center justify-between mb-2">
+                <button id="rubricButton" class="text-left flex-grow" onclick="displayRubric('${rubrics[i]["TeamName"]}')">${rubrics[i]["TeamName"]}: ${rubrics[i]["TeamMembers"].join(", ")} - ${rubrics[i]["Total"]} points</button>
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline ml-2" onclick="deleteRubric('${rubrics[i]["TeamName"]}')">Delete</button>
+            </div>`
         }
 
         document.getElementById("rubricsGroup").innerHTML = rubricsHTML
@@ -80,7 +83,7 @@ function addRubric() {
 
 
         var request = new XMLHttpRequest()
-        request.open('POST', `http://localhost/newRubric/${judge}`, false)
+        request.open('POST', `/newRubric/${judge}`, false)
         request.setRequestHeader("Content-type", "application/json");
         request.send(JSON.stringify(newRubric))
 
@@ -99,7 +102,7 @@ function displayRubric(teamName, teamMembers) {
         members = teamMembers
 
         var request = new XMLHttpRequest()
-        request.open('GET', `http://localhost/getRubric/${judge}/${teamName}`, false)
+        request.open('GET', `/getRubric/${judge}/${teamName}`, false)
         request.send()
 
         rubric = JSON.parse(request.responseText)
@@ -163,7 +166,7 @@ function saveRubric() {
 
 
         var request = new XMLHttpRequest()
-        request.open('PUT', `http://localhost/updateRubric/${judge}/${team}`, false)
+        request.open('PUT', `/updateRubric/${judge}/${team}`, false)
         request.setRequestHeader("Content-type", "application/json");
         request.send(JSON.stringify(newRubric))
 
@@ -189,5 +192,21 @@ function back() {
 function signOut() {
     sessionStorage.removeItem('judge')
     judge = ""
-    window.location.href = "http://localhost/login";
+    window.location.href = "/login";
+}
+
+function deleteRubric(teamName) {
+    if (confirm(`Are you sure you want to delete the rubric for "${teamName}"?`)) {
+        try {
+            var request = new XMLHttpRequest()
+            request.open('DELETE', `/deleteRubric/${judge}/${teamName}`, false)
+            request.send()
+
+            alert("Rubric deleted successfully!")
+            loadRubrics()
+        } catch (error) {
+            console.log(error)
+            alert("Error deleting rubric. Please try again.")
+        }
+    }
 }
