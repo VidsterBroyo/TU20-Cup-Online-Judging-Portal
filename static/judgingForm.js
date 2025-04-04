@@ -1,4 +1,4 @@
-judges = ["Michael", "Trevor", "Franklin"]
+judges = ["Sanghyun", "Huzaifa", "Markus", "Jon", "Michael", "Trevor", "Franklin"]
 judge = ""
 team = ""
 members = []
@@ -75,7 +75,6 @@ function addRubric() {
             "Criterion C": { "Score": 0, "Comments": "" },
             "Criterion D": { "Score": 0, "Comments": "" },
             "Criterion E": { "Score": 0, "Comments": "" },
-            "Extra": 0,
             "Total": 0,
             "Overall": ""
         }
@@ -128,8 +127,6 @@ function displayRubric(teamName, teamMembers) {
         document.getElementById("mark").innerHTML = rubric["Total"]
         document.getElementById("overall").value = rubric["Overall"]
 
-        document.getElementById("EP").value = rubric["Extra"]
-
         document.getElementById("rubric").style.display = "block"
         document.getElementById("allRubrics").style.display = "none"
 
@@ -143,7 +140,7 @@ function displayRubric(teamName, teamMembers) {
 
 function changed() {
     change = true
-    document.getElementById("mark").innerHTML = parseInt(document.getElementById("EP").value) + parseInt(document.getElementById("CAS").value) + parseInt(document.getElementById("CBS").value) + parseInt(document.getElementById("CCS").value) + parseInt(document.getElementById("CDS").value) + parseInt(document.getElementById("CES").value)
+    document.getElementById("mark").innerHTML =  parseInt(document.getElementById("CAS").value) + parseInt(document.getElementById("CBS").value) + parseInt(document.getElementById("CCS").value) + parseInt(document.getElementById("CDS").value) + parseInt(document.getElementById("CES").value)
 }
 
 function saveRubric() {
@@ -158,7 +155,6 @@ function saveRubric() {
             "Criterion C": { "Score": document.getElementById("CCS").value, "Comments": document.getElementById("CCC").value },
             "Criterion D": { "Score": document.getElementById("CDS").value, "Comments": document.getElementById("CDC").value },
             "Criterion E": { "Score": document.getElementById("CES").value, "Comments": document.getElementById("CEC").value },
-            "Extra": document.getElementById("EP").value,
             "Total": document.getElementById("mark").innerHTML,
             "Overall": document.getElementById("overall").value
         }

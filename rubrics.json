@@ -1,1 +1,278 @@
-{"Michael":[{"TeamName":"SAMPLE TEAM","Criterion A":{"Score":"10","Comments":"comment"},"Criterion B":{"Score":"10","Comments":"comment"},"Criterion C":{"Score":"10","Comments":"comment"},"Criterion D":{"Score":"10","Comments":"comment"},"Criterion E":{"Score":"10","Comments":"comment"},"Extra":"0","Total":"50","Overall":"                        ","TeamMembers":["Member 1"," Member 2"]}],"Trevor":[{"TeamName":"SAMPLE TEAM","Criterion A":{"Score":"10","Comments":"comment"},"Criterion B":{"Score":"10","Comments":"comment"},"Criterion C":{"Score":"10","Comments":"comment"},"Criterion D":{"Score":"10","Comments":"comment"},"Criterion E":{"Score":"10","Comments":"comment"},"Extra":"0","Total":"50","Overall":"                        ","TeamMembers":["Member 1"," Member 2"]}],"Franklin":[{"TeamName":"SAMPLE TEAM","Criterion A":{"Score":"10","Comments":"comment"},"Criterion B":{"Score":"10","Comments":"comment"},"Criterion C":{"Score":"10","Comments":"comment"},"Criterion D":{"Score":"10","Comments":"comment"},"Criterion E":{"Score":"10","Comments":"comment"},"Extra":"0","Total":"50","Overall":"                        ","TeamMembers":["Member1","Member2"]}]}
+{
+    "Michael": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "15",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "55",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member 1",
+                " Member 2"
+            ]
+        },
+        {
+            "TeamName": "Hello",
+            "Criterion A": {
+                "Score": "15",
+                "Comments": ""
+            },
+            "Criterion B": {
+                "Score": "9",
+                "Comments": ""
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": ""
+            },
+            "Criterion D": {
+                "Score": "24",
+                "Comments": ""
+            },
+            "Criterion E": {
+                "Score": "19",
+                "Comments": ""
+            },
+            "Total": "77",
+            "Overall": "",
+            "TeamMembers": [
+                "jon",
+                " jay"
+            ]
+        }
+    ],
+    "Trevor": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member 1",
+                " Member 2"
+            ]
+        }
+    ],
+    "Franklin": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member1",
+                "Member2"
+            ]
+        },
+        {
+            "TeamName": "Hello",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": ""
+            },
+            "Criterion B": {
+                "Score": "15",
+                "Comments": ""
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": ""
+            },
+            "Criterion D": {
+                "Score": "11",
+                "Comments": ""
+            },
+            "Criterion E": {
+                "Score": "20",
+                "Comments": ""
+            },
+            "Total": "66",
+            "Overall": "",
+            "TeamMembers": [
+                "jon",
+                " jaylo"
+            ]
+        }
+    ],
+    "Jon": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member1",
+                "Member2"
+            ]
+        }
+    ],
+    "Markus": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member1",
+                "Member2"
+            ]
+        }
+    ],
+    "Huzaifa": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member1",
+                "Member2"
+            ]
+        }
+    ],
+    "Sanghyun": [
+        {
+            "TeamName": "SAMPLE TEAM",
+            "Criterion A": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion B": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion C": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion D": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Criterion E": {
+                "Score": "10",
+                "Comments": "comment"
+            },
+            "Total": "50",
+            "Overall": "                        ",
+            "TeamMembers": [
+                "Member1",
+                "Member2"
+            ]
+        }
+    ]
+
+}

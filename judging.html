@@ -25,10 +25,6 @@
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 Sign out
             </button>
-            <a href="/stats" 
-                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2">
-                View Statistics
-            </a>
             <h1 id="heroTitle">TU20 Cup Judging Portal</h1>
             <p id="subtitle">Thank you for being a judge!</p>
         </div>
@@ -47,8 +43,8 @@
             data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add a rubric
         </button>
-        <p class="text-center text-xl font-medium text-blue-600 dark:text-blue-500 underline"><a target="_blank" href="https://drive.google.com/drive/folders/1IrbqYeKwqzu6uELhdfn0NVnc5poPBf92?usp=drive_link">Team's Business Plans Folder</a></p>
-        <p class="text-center text-xl font-medium text-blue-600 dark:text-blue-500 underline"><a target="_blank" href="https://drive.google.com/drive/folders/1IrbqYeKwqzu6uELhdfn0NVnc5poPBf92?usp=drive_link">Extra Points Spreadsheet</a></p>
+        <p class="text-center text-xl font-medium text-blue-600 dark:text-blue-500 underline"><a target="_blank" href="https://drive.google.com/drive/folders/15PgCOnCagUAtna0P5j3JUVuRemuTUagHQ97IleoTEqSG9oOBWGQySyxRtN9wl-m2vnZ6Xwh6?usp=sharing">Teams' Business Plans Folder</a></p>
+        <p class="text-center text-xl font-medium text-blue-600 dark:text-blue-500 underline"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1KZI_VIDguyF4RCeg49M3KtdWRUg9L4WkrYhViolxQ1o/edit?gid=1519676889#gid=1519676889">Pitch Schedule</a></p>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -98,6 +94,7 @@
                             <li>Problem is real, existing, and experienced by a wide enough group of people</li>
                             <li>Solution is realistic, no big foreseeable issues (or if there are, they are addressed)
                             </li>
+                            <li>Problem relates to ESG</li>
                             <li>Business is able to grow & expand</li>
                         </ul>
                     </td>
@@ -191,14 +188,6 @@
                     <td class="border px-4 py-2"><textarea oninput="changed()" type="text" id="overall"
                             class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         </textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="border px-10 py-2"><b>Extra Points</b></td>
-                    <td class="border px-4 py-2">
-                        <input oninput="changed()" style="width: 70%; display: inline-block"
-                            type="number" min="0" max="20" id="EP"
-                            class="shadow appearance-none border rounded w-full py-1 px-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                     </td>
                 </tr>
             </tbody>
