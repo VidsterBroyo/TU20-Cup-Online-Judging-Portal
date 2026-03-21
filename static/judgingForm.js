@@ -9,7 +9,7 @@ function login() {
     password = document.getElementById('password').value
 
 
-    if (judges.includes(user) && password == "Cup2024r0cks!") {
+    if (judges.includes(user) && password == "Cup2024r0cks!") { // don't worry, we change this pw
         sessionStorage.setItem('judge', user)
 
         window.location.href = "/rubrics"
