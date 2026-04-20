@@ -4,16 +4,15 @@ team = ""
 members = []
 change = false
 
+const PASSWORD_HASH = "7cfe25a95ca12ce7f1b3d82495055461ee002e1104b87e62290cc9e2f715d189"
+
 function login() {
     user = document.getElementById('user').value
     password = document.getElementById('password').value
 
-
-    if (judges.includes(user) && password == "Cup2024r0cks!") {
+    if (judges.includes(user) && CryptoJS.SHA256(password).toString() === PASSWORD_HASH) {
         sessionStorage.setItem('judge', user)
-
         window.location.href = "/rubrics"
-
     } else {
         alert("Invalid credentials")
     }
