@@ -1,4 +1,4 @@
-judges = ["Sanghyun", "Huzaifa", "Markus", "Jon", "Michael", "Trevor", "Franklin"]
+judges = ["Athira", "Zayan", "Marnie", "Ella", "Judge 1", "Judge 2", "Michael"]
 judge = ""
 team = ""
 members = []
@@ -62,7 +62,7 @@ function loadRubrics() {
 
 function addRubric() {
     tName = document.getElementById("teamName").value
-    members = document.getElementById("teamMembers").value.split(",")
+    members = document.getElementById("teamMembers").value.split(",").map(m => m.trim())
 
     try {
 
